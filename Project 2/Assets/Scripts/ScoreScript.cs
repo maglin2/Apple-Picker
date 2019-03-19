@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour
 {
-    public int score;
+    private int score;
     public Text textbox;
     // Start is called before the first frame update
     void Start()
@@ -18,13 +18,13 @@ public class ScoreScript : MonoBehaviour
         if (collision.gameObject.name == "bullet(Clone)")
         {
             score -= 10;
-            textbox.text = "Score: " + score;
+            textbox.text = score.ToString();
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.name == "points(Clone)")
         {
             score += 30;
-            textbox.text = "Score: " + score;
+            textbox.text = score.ToString();
             Destroy(collision.gameObject);
         }
     }

@@ -46,7 +46,11 @@ public class PrefabSpawner : MonoBehaviour
         if (transform.position.x < -10 || transform.position.x > 10)
         {
             transform.position = new Vector2(transform.position.x * -1, transform.position.y);
+            nextFire2 += 1f;
         }
+        fireRate2 = Random.Range(0, 2.5f);
+        fireRate = Random.Range(1, 2);
+
     }
     
 }

@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class DestroyScript : MonoBehaviour
 {
     public Text lives;
+    public Text score;
     private int livesCount;
-    public int score;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +22,10 @@ public class DestroyScript : MonoBehaviour
         lives.text = "Lives: " + livesCount;
         if(livesCount == 0)
         {
+            if (System.Int32.Parse(score.text) > PlayerPrefs.GetInt("Scores9"))
+            {
+                PlayerPrefs.SetInt("Scores9", System.Int32.Parse(score.text));
+            }
             SceneManager.LoadScene("HighScores");
         }
         Destroy(collision.gameObject);
