@@ -21,7 +21,7 @@ public class DestroyScript : MonoBehaviour
         lives.text = "Lives: " + livesCount;
         if(livesCount == 0)
         {
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("MainScene");
         }
         Destroy(collision.gameObject);
     }
