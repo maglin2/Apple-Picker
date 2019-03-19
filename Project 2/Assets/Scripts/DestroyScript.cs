@@ -8,6 +8,7 @@ public class DestroyScript : MonoBehaviour
 {
     public Text lives;
     private int livesCount;
+    public int score;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class DestroyScript : MonoBehaviour
         lives.text = "Lives: " + livesCount;
         if(livesCount == 0)
         {
-            SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene("HighScores");
         }
         Destroy(collision.gameObject);
     }

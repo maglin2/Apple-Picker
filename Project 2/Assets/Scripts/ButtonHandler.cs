@@ -14,4 +14,12 @@ public class ButtonHandler : MonoBehaviour
     {
         SceneManager.LoadScene("GameScene");
     }
+    public void highScores()
+    {
+        SceneManager.LoadScene("HighScores");
+    }
+    public void mainMenu()
+    {
+        SceneManager.LoadScene("MainScene");
+    }
 }

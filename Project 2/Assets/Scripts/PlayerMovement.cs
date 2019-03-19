@@ -17,11 +17,11 @@ public class PlayerMovement : MonoBehaviour
         //handles player movement, takes into account every possible combo of buttons and prevents breaking movement
         if(Input.GetKey("a")&&!Input.GetKey("d"))
         {
-            rb.velocity = new Vector2(-5,0);
+            rb.velocity = new Vector2(-10,0);
         }
         if (Input.GetKey("d")&&!Input.GetKey("a"))
         {
-            rb.velocity = new Vector2(5, 0);
+            rb.velocity = new Vector2(10, 0);
         }
         if (Input.GetKey("a") && Input.GetKey("d"))
         {
